@@ -22,8 +22,43 @@ header {
 header {
 	background-color: #6699FF;
 	color: black;
-	padding: 20px;
-	margin-top: 10px;
+	left: 0;
+	position: fixed;
+	width: 100%;
 	font-size: 150%;
 }
 
+nav {
+	padding:0;
+	margin:0;
+	font-size:90%;
+}
+
+nav ul {
+	display:inline-block;
+}
+
+nav li {
+	list-style:none;
+	float:left;
+	text-shadow: 1px 1px 1px #333333;
+	padding:2px;
+}
+
+nav li:last-child {
+	margin-right:10px;
+}
+
+.pull-right {
+	float:right;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+container#page_content_container {
+	position:fixed;
+	top: 70px;
+	left: 20px;
+}

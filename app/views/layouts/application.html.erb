@@ -9,10 +9,30 @@
 <body>
 
 <header>
-Test	
+	<nav>
+		<ul>
+				<li class="span-full">
+				<%= link_to 'Logo Placeholder', '#' %>
+				</li>
+		</ul>
+		<ul class="pull-right">
+			<% if user_signed_in? %>
+				<li><%= current_user.email %></li>
+				<li><%= link_to 'Home', '#' %></li>
+				<li><%= link_to 'Upload', '#' %></li>
+				<li><%= link_to 'Settings', '#' %></li>
+				<li><%= link_to 'Sign Out', '#' %></li>
+			<% else %>
+				<li><%= link_to 'Home', '#' %></li>
+				<li><%= link_to 'Sign In', '#' %><li>
+				<li><%= link_to 'Register', '#' %></li>
+			<% end %>
+		</ul>
+	</nav>	
 </header>
 
+<container id="page_content_container">
 <%= yield %>
-
+</container>
 </body>
 </html>
