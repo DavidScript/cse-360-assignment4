@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 	before_filter :configure_devise_params, if: :devise_controller?
 		def configure_devise_params
 			devise_parameter_sanitizer.for(:edit) do |u|
-				u.permit(:display_name, :email, :password, :password_confirmation)
+				u.permit(:display_name, :profile_picture, :email, :password, :password_confirmation)
 			end
 		end
   # Prevent CSRF attacks by raising an exception.

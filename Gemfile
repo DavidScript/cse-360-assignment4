@@ -35,6 +35,9 @@ gem 'unicorn'
 # Use devise for user authentication
 gem 'devise'
 
+# Use Paperclip for image storage
+gem "paperclip", "~> 4.2"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
