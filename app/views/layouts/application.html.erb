@@ -17,7 +17,11 @@
 		</ul>
 		<ul class="pull-right">
 			<% if user_signed_in? %>
-				<li><%= current_user.email %></li>
+				<% if current_user.display_name == nil %>
+					<li><%= current_user.email %></li>
+				<% else %>
+					<li><%= current_user.display_name %></li>
+				<% end %>
 				<li><%= link_to 'Home', root_path %></li>
 				<li><%= link_to 'Upload', '#' %></li>
 				<li><%= link_to 'Settings', edit_user_registration_path  %></li>
