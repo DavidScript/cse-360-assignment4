@@ -1,0 +1,19 @@
+<h1>Upload a new picture</h1>
+
+<%= form_for @image, :url => images_path, :html => { :multipart => true } do |f| %>
+	<% if @image.errors.any? %>
+	<ul>
+		<% @image.errors.full.messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+	<% end %>
+
+	<div><%= f.label :title %><br />
+	<%= f.text_field :title %></div>
+
+	<div>File<br />
+	<%= f.file_field :data %></div>	
+
+	<div><%= f.submit "Upload" %></div>
+<% end %>

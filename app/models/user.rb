@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 	
 	has_attached_file :profile_picture, styles: { tiny: "35x35#", small: "100x100#", medium: "300x300#" }
 	validates_attachment_content_type :profile_picture, :content_type => /\Aimage/
+
+	has_many :images
 end
